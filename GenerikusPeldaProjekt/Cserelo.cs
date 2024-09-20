@@ -1,4 +1,6 @@
-﻿namespace GenerikusPeldaProjekt
+﻿using System.ComponentModel.Design;
+
+namespace GenerikusPeldaProjekt
 {
     public class Cserelo<T> where T : class
     {
@@ -8,6 +10,11 @@
             T temp = elso;
             elso = masodik;
             masodik = temp;
+        }
+
+        public static string ToString(T elso, T masodik)
+        {
+            return $"{elso}, {masodik}";
         }
     }
 }
